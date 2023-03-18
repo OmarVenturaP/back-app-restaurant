@@ -2,8 +2,11 @@ import express from "express";
 import cors from "cors";
 // Importando conexión a la Base de datos
 import db from "./database/db.js";
-// importando enrutador
-import userRoutes from "./routes/routes.js";
+// importando enrutador de usuarios
+import userRoutes from "./routes/routesUsers.js";
+// importando enrutador de productos
+import productRoutes from "./routes/routesProducts.js";
+
 
 const app = express();
 
@@ -11,8 +14,11 @@ const app = express();
 app.use(cors());
 // Configurando JSON
 app.use(express.json());
-// Configurando enrutador
+// Configurando enrutador para users
 app.use('/user', userRoutes);
+// Configurando enrutador para productos
+app.use('/products', productRoutes);
+
 
 try {
     await db.authenticate();

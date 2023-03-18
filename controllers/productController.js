@@ -1,5 +1,5 @@
 // importando el modelo para los productos en la base de datos
-import productModel from "../models/productModels";
+import productModel from "../models/productModels.js";
 
 //* Definiendo métodos para el CRUD */
 // GET ALL

@@ -36,6 +36,6 @@ app.get('/', (req, res) =>{
 })
 
 // Configurando el puerto
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log('Servidor corriendo en el puerto 8000')
 })

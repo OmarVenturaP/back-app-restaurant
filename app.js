@@ -28,8 +28,6 @@ try {
     
 }
 
-
-
 // Configurando endpoints
 app.get('/', (req, res) =>{
     res.send('Api corriendo correctamente')
